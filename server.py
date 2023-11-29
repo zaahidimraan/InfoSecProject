@@ -19,8 +19,8 @@ def before_request():
     if request.method == 'POST' and request.content_type != 'application/x-www-form-urlencoded':
         abort(415)  # Unsupported Media Type
 
-@app.route('/')
-def homepage():
+@app.route('/server')
+def server():
     session['authenticated'] = False    # Set to True if you want to skip authentication
     return '''
         Welcome to the homepage! You can access this page without authentication.
@@ -53,4 +53,4 @@ def internal():
     return "Welcome to the internal system! You can only see this page if you're authenticated."
 
 if __name__ == '__main__':
-    app.run(ssl_context='adhoc')
+    app.run(ssl_context=('server.pem', 'server.key'))
