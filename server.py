@@ -1,7 +1,7 @@
-from flask import Flask, request, redirect, url_for, session
+from flask import Flask, request, redirect, url_for, session, abort
 
 app = Flask(__name__)
-app.secret_key = 'your-secret-key'  # Replace with your own secret key
+app.secret_key = '123'
 
 # This could be any function that verifies the user.
 def verify_user(code):
@@ -9,12 +9,19 @@ def verify_user(code):
 
 @app.before_request
 def before_request():
-    # Enforce HTTPS
-    if not request.is_secure:
-        return "Please use HTTPS."
+    # Enforce HTTPS for the internal page
+    if request.path == '/internal' and not request.is_secure and not request.headers.get('X-Forwarded-Proto', '').startswith('https') and not session.get('authenticated'):
+        abort(403)  # Forbidden
+    # IP address filtering
+    if request.remote_addr != '127.0.0.1':
+        abort(403)  # Forbidden
+    # Content type checking for POST requests
+    if request.method == 'POST' and request.content_type != 'application/x-www-form-urlencoded':
+        abort(415)  # Unsupported Media Type
 
 @app.route('/')
 def homepage():
+    session['authenticated'] = False    # Set to True if you want to skip authentication
     return '''
         Welcome to the homepage! You can access this page without authentication.
         <br>
@@ -31,7 +38,7 @@ def verify():
             session['authenticated'] = True
             return redirect(url_for('internal'))
         else:
-            return "Invalid code, please try again."
+            return redirect(url_for('internal'))
     return '''
         <form method="POST">
             Code: <input type="text" name="code">
