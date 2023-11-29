@@ -19,19 +19,19 @@ def before_request():
     if request.method == 'POST' and request.content_type != 'application/x-www-form-urlencoded':
         abort(415)  # Unsupported Media Type
 
-@app.route('/server')
-def server():
+@app.route('/')
+def externalnetwork():
     session['authenticated'] = False    # Set to True if you want to skip authentication
     return '''
         Welcome to the homepage! You can access this page without authentication.
         <br>
-        <a href="/verify"><button>Go to Verification Page</button></a>
+        <a href="/server"><button>Go to Server Page</button></a>
         <br>
         <a href="/internal"><button>Go to Internal Page</button></a>
     '''
 
-@app.route('/verify', methods=['GET', 'POST'])
-def verify():
+@app.route('/server', methods=['GET', 'POST'])
+def server():
     if request.method == 'POST':
         code = request.form.get('code')
         if verify_user(code):
@@ -49,8 +49,8 @@ def verify():
 @app.route('/internal')
 def internal():
     if not session.get('authenticated'):
-        return redirect(url_for('verify'))
+        return redirect(url_for('server'))
     return "Welcome to the internal system! You can only see this page if you're authenticated."
 
 if __name__ == '__main__':
-    app.run(ssl_context=('server.pem', 'server.key'))
+    app.run()
