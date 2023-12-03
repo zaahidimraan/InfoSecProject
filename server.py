@@ -71,6 +71,11 @@ def internal():
     return  '''
             <h1>Internal Page</h1>
             <p>Welcome to the internal system! You can only see this page if you're authenticated.</p>
+            <script>
+                setTimeout(function(){
+                    window.location.href = "/dmz";
+                }, 5000);
+            </script>
             '''
 
 if __name__ == '__main__':
