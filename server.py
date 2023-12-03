@@ -8,14 +8,25 @@ app.secret_key = '123'
 def verify_user(code):
     return code == "1234"
 
+def validate_input(input_string):
+    if len(input_string) != 4:
+        return False
+    for digit in range(10):
+        if str(digit) not in input_string:
+            return False
+    return True
+
+
+def validate_input(input_string):
+    if len(input_string) != 4:
+        return False
+    return all(char.isdigit() for char in input_string)
+
 
 @app.before_request
 def before_request():
-    # Enforce HTTPS for the internal page
-    if request.path == '/internal' and request.is_secure and session.get('authenticated'):
-        abort(403)  # Forbidden
-    # IP address filtering
-    if request.remote_addr == '127.0.0.1' and request.path == '/internal':
+
+    if request.path == '/internal' and request.is_secure and session.get('authenticated') and request.remote_addr == '127.0.0.1': 
         abort(403)  # Forbidden
     # Content type checking for POST requests
     if request.method == 'POST' and request.content_type != 'application/x-www-form-urlencoded':
@@ -37,7 +48,8 @@ def externalnetwork():
 def dmz():
     if request.method == 'POST':
         code = request.form.get('code')
-        if verify_user(code):
+        print(validate_input(code))
+        if verify_user(code) and validate_input(code):
             session['authenticated'] = True
             return redirect(url_for('internal'))
         else:
