@@ -68,3 +68,55 @@ INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:27:43] "[32mPOST /dmz HTTP/1.1[0m"
 INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:27:43] "GET /internal HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:27:48] "GET /dmz HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:28:38] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:34:18] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:34:18] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:34:24] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/shehzad/InfoSecProject/server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 900-401-953
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:35:03] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:35:03] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:35:08] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:36:33] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:36:33] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:42:28] "[32mGET /internal HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:42:28] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:42:32] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:42:32] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:43:28] "[32mGET /internal HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:43:28] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:43:32] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:43:32] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:44:31] "[32mGET /internal HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:44:31] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:44:35] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:44:35] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:45:21] "[32mGET /internal HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:45:21] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:45:24] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:45:24] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:47:29] "[32mGET /internal HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:47:29] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:47:32] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:47:32] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:47:53] "[32mGET /internal HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:47:53] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:47:56] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:47:56] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:49:38] "[32mGET /internal HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:49:38] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:49:41] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:49:41] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:50:00] "[32mGET /internal HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:50:00] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:50:03] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:50:03] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:51:52] "[32mGET /internal HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:51:52] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:51:54] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:51:54] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:52:17] "[32mGET /internal HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:52:17] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:52:21] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:52:21] "GET /internal HTTP/1.1" 200 -

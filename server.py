@@ -139,15 +139,8 @@ def internal():
         return redirect(url_for('dmz'))
     else:
         session['authenticated'] = False
-        return  '''
-                <h1>Internal Page</h1>
-                <p>Welcome to the internal system! You can only see this page if you're authenticated.</p>
-                <script>
-                    setTimeout(function(){
-                        window.location.href = "/dmz";
-                    }, 5000);
-                </script>
-                '''
+        return  render_template('internal.html')
+                
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True, host='127.0.0.1' )
