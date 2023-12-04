@@ -20,14 +20,50 @@
         p {
             color: #666;
         }
+        .feature-list {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .button-container a {
+            text-decoration: none;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Our Application</h1>
-        <p>This application is designed to provide a seamless user experience. We hope you find it useful and enjoyable.</p>
-        <p>Muhammad Shehzad, Roll No: 201-1756</p>
-        <p>Zahid Imran, Roll No: 20I-0469</p>
+        <p>This Flask application implements a prototype for a Firewall network on a application with three segments:</p>
+        <ul class="feature-list">
+            
+            <li>The external network</li>
+            <li>The DMZ (Demilitarized Zone)</li>
+            <li>The internal network</li>
+            <li>The application aims to demonstrate security features such as Content Security Policy (CSP), HTTP Strict Transport Security (HSTS), Clickjacking protection, error handling, and logging</li>
+        </ul>
+        <p>Group Members</p>
+        <ul class="feature-list">
+            <li> Muhammad Shehzad, Roll No: 201-1756,<br></li>
+            <li> Zahid Imran, Roll No: 20I-0469<br></li>
+            <li> Usman Kamal, Roll No: 20I-0469<br></li>
+        </ul>
+        <br>
+        <div class="button-container">
+            <a href="/dmz"><button>Go to DMZ Layer</button></a>
+            <a href="/internal"><button>Go to Internal Layer</button></a>
+        </div>
     </div>
 </body>
 </html>
