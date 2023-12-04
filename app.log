@@ -120,3 +120,10 @@ INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:52:17] "[32mGET /internal HTTP/1.1
 INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:52:17] "GET /dmz HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:52:21] "[32mPOST /dmz HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 15:52:21] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 16:00:41] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 16:01:20] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 16:01:20] "GET /internal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 16:04:34] "[32mGET /internal HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 16:04:34] "GET /dmz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 16:04:37] "[32mPOST /dmz HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2023 16:04:37] "GET /internal HTTP/1.1" 200 -
