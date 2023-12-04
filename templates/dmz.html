@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DMZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
     
-    <h1>DMZ Layer</h1>
-    <form method="POST" action="">
+    <h1 style="text-align: center;">DMZ Layer</h1>
+    <form method="POST" action="" style="max-width: 400px; margin: 0 auto;">
         {{ form.csrf_token }}
         {{ form.hidden_tag() }}
-        {{ form.code.label }} {{ form.code }}
-        {{ form.submit }}
+        <div style="margin-bottom: 10px;">
+            <label for="code" style="display: block; font-weight: bold;">Code:</label>
+            {{ form.code(style="width: 100%; padding: 5px;") }}
+        </div>
+        <div>
+            {{ form.submit(style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;") }}
+        </div>
     </form>
 
     
